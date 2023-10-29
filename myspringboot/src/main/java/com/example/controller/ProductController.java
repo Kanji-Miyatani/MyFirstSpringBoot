@@ -1,28 +1,17 @@
 package com.example.controller;
 
-import com.example.model.Product;
-import com.example.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 @Controller
 public class ProductController {
-    // 商品操作サービスのインスタンス（実体）を作ります。このサービスが実際の商品操作を行います。
-    private final ProductService productService;
-
-    // '@Autowired'と書いてあるのは、この下に書かれている部分（商品操作サービス）が自動的に準備されるという意味です。
-    // このクラス内のどこからでも、この商品操作サービスを利用できるようになります。
-    @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
-    @GetMapping("/")
-    public String showHomePage(Model model){
-        List<Product> products = productService.getAllProducts();
-        model.addAttribute("productList",products);
+    @RequestMapping(value = "/" ,method = RequestMethod.GET)
+    public String showHomePage(){
         return "index";
     }
 }
