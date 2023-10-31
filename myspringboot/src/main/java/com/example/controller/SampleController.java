@@ -1,18 +1,20 @@
 package com.example.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.List;
 @Controller
-public class ProductController {
-    @GetMapping("/")
+@RequestMapping("/sample")
+public class SampleController {
+
     @RequestMapping(method = RequestMethod.GET)
-    public String showHomePage(){
+    public String test(Model model) {
+        model.addAttribute("name", "草苅API");
+        model.addAttribute("get", "GET /sample");
+        model.addAttribute("post", "POST /sample");
         return "index";
     }
+
 }
