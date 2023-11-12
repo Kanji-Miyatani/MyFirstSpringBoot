@@ -1,0 +1,17 @@
+map:{
+    ; 2023/11/12 20:09:37.631 = map:{
+        ; diffDate = 2023/11/12 20:09:37.631
+        ; tableCount = map:{
+            ; next = 1
+            ; previous = 0
+        }
+        ; diffAuthor = KANJI
+        ; diffGitBranch = main
+        ; tableDiff = map:{
+            ; users = map:{
+                ; tableName = users
+                ; diffType = ADD
+            }
+        }
+    }
+}

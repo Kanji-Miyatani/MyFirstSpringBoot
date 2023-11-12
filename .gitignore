@@ -27,6 +27,8 @@ local.properties
 .loadpath
 .recommenders
 
+docker/db/
+
 # External tool builders
 .externalToolBuilders/
 
